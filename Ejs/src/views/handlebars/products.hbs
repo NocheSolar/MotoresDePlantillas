@@ -1,0 +1,23 @@
+<section class="productos">
+    <h2>Productos</h2>
+    {{#if products}}
+    <table>
+        <tr>
+            <th>TITULO</th>
+            <th>PORTADA</th>
+            <th>PRECIO</th>
+        </tr>
+
+        {{#each products}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td><img alt="item img" src="{{this.thumbnail}}" /></td>
+            <td>${{this.price}}Arg </td>
+        </tr>
+        {{/each}}
+    </table>
+    {{else}}
+    <p>No hay productos.</p>
+    {{/if}}
+
+</section>

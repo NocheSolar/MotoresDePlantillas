@@ -1,0 +1,19 @@
+block
+    section.productos
+        h2 Productos
+            if products 
+                table
+                    tr
+                        th TITULO
+                        th PORTADA
+                        th PRECIO
+                    
+                
+                    each product in products
+                        tr
+                            td= product.title 
+                            td
+                                img(alt="item img", src=`${product.thumbnail}`)
+                            td= `$${product.price} Arg`
+            else
+                p No hay productos.
